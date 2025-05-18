@@ -1,26 +1,31 @@
 <template>
   <div
-    :class="[
-      'flex flex-col items-center justify-center text-white rounded-2xl shadow-2xl max-w-sm mx-auto p-8 transition-all duration-700',
-      'bg-gradient-to-br bg-white/10 backdrop-blur-md ring-1 ring-white/20',
-      weatherClass
+    :class="[ 
+        'flex flex-col items-center justify-center text-white rounded-2xl shadow-2xl max-w-sm w-full mx-auto p-6 sm:p-8 transition-all duration-700',
+        'bg-gradient-to-br bg-white/10 backdrop-blur-md ring-1 ring-white/20',
+        weatherClass
     ]"
   >
+
     <label for="city" class="mb-4 text-lg font-semibold text-white">Vali linn:</label>
     <select id="city" v-model="selectedCity" @change="fetchWeather" class="mb-6 text-black px-4 py-2 rounded-md">
       <option v-for="city in cities" :key="city" :value="city">{{ city }}</option>
     </select>
 
     <div class="text-6xl mb-2">{{ weatherIcon }}</div>
-    <h2 class="text-2xl font-bold tracking-wide mb-1">
+    <!-- Lisa teksti suurusele responsive klassid -->
+    <h2 class="text-xl sm:text-2xl font-bold tracking-wide mb-1">
       {{ weather?.name || '...' }}
     </h2>
-    <p class="text-lg capitalize mb-4">
+
+    <p class="text-base sm:text-lg capitalize mb-4">
       {{ weather?.weather?.[0].description || 'Laen...' }}
     </p>
-    <p class="text-4xl font-semibold">
+
+    <p class="text-3xl sm:text-4xl font-semibold">
       {{ weather?.main?.temp }}°C
     </p>
+
   </div>
 </template>
 
