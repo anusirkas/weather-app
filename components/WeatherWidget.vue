@@ -1,8 +1,9 @@
 <template>
   <div
     :class="[
-      'flex flex-col items-center justify-center text-white rounded-3xl shadow-2xl max-w-sm mx-auto p-8 transition-all duration-700',
-      weatherClass
+        'flex flex-col items-center justify-center text-white rounded-2xl shadow-xl max-w-sm mx-auto p-8 transition-all duration-700',
+        'bg-gradient-to-br bg-white/10 backdrop-blur-md ring-1 ring-white/20',
+        weatherClass
     ]"
   >
     <div class="text-6xl mb-2">{{ weatherIcon }}</div>
@@ -37,19 +38,19 @@ const fetchWeather = async () => {
   const main = data.weather[0].main.toLowerCase()
 
   if (main.includes('rain')) {
-    weatherClass.value = 'bg-gradient-to-br from-blue-500 to-indigo-700'
+    weatherClass.value = 'from-blue-500 to-indigo-700'
     weatherIcon.value = '🌧️'
   } else if (main.includes('clear')) {
-    weatherClass.value = 'bg-gradient-to-br from-yellow-300 to-yellow-600'
+    weatherClass.value = 'from-yellow-300 to-yellow-600'
     weatherIcon.value = '☀️'
   } else if (main.includes('cloud')) {
-    weatherClass.value = 'bg-gradient-to-br from-gray-300 to-gray-600'
+    weatherClass.value = 'from-gray-300 to-gray-600'
     weatherIcon.value = '☁️'
   } else if (main.includes('snow')) {
-    weatherClass.value = 'bg-gradient-to-br from-blue-100 to-white'
+    weatherClass.value = 'from-blue-100 to-white'
     weatherIcon.value = '❄️'
   } else {
-    weatherClass.value = 'bg-gradient-to-br from-green-400 to-green-700'
+    weatherClass.value = 'from-green-400 to-green-700'
     weatherIcon.value = '🌡️'
   }
 }
@@ -59,7 +60,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style>
 /* Smooth fade-in animation */
 div {
   animation: fadeIn 1.2s ease-in-out;

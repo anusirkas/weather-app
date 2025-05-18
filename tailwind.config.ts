@@ -6,6 +6,7 @@ const config: Config = {
     './pages/**/*.{vue,js}',
     './app.vue',
   ],
+  safelist: ['backdrop-blur-md', 'bg-white/10', 'ring-1', 'ring-white/20'],
   theme: {
     extend: {
       fontFamily: {
