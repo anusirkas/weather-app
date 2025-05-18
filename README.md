@@ -19,8 +19,8 @@ See projekt on loodud Nuxt 3 + Vue 3 abil. Rakendus kuvab jooksvaid ilmaandmeid 
 
 ## 🛠️ Setup
 
-npm install
-npm run dev
+- `npm install`
+- `npm run dev`
 
 ## 📌 Märkus Magento 2 ja Vue Storefronti kohta
 
