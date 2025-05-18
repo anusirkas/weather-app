@@ -23,7 +23,7 @@
     </p>
 
     <p class="text-3xl sm:text-4xl font-semibold">
-      {{ weather?.main?.temp }}°C
+      {{ Math.round(weather?.main?.temp) }}°C
     </p>
 
   </div>
