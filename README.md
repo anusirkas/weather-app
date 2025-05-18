@@ -9,78 +9,72 @@ See projekt on loodud **Nuxt 3 + Vue 3** abil. Rakendus kuvab jooksvaid ilmaandm
 - Demonstreerida oskust kasutada AI abi (nt ChatGPT)  
 - Hoida head Git töövoogu (sagedased commit'id ja selged kirjeldused)
 
-## 🚀 Kasutatavad tehnoloogiad
+## 🚀 Kasutatud tehnoloogiad
 
 - [Nuxt 3](https://nuxt.com/)  
 - Vue 3 Composition API  
-- TailwindCSS (stiilide loomiseks)  
+- TailwindCSS  
 - OpenWeatherMap API  
 - Git + GitHub
 
-## 🛠️ Setup
+## ⚙️ Paigaldus ja käivitamine
 
-- `npm install`  
-- `npm run dev`
+```bash
+npm install
+npm run dev
+```
 
-🧪 Tehtud funktsionaalsus
-✅ Dropdown linnade valikuga (Tallinn, Tartu, London jne)
+## ✅ Tehtud funktsionaalsus
 
-✅ Ilma põhine visuaalne muutus (nt ☀️ 🌧️ ❄️)
+- ✅ Dropdown linnade valikuga (Tallinn, Tartu, London jne)  
+- ✅ Ilmapõhine visuaalne muutus (nt ☀️ 🌧️ ❄️)  
+- ✅ Kasutaja asukoha automaatne tuvastus (Geolocation API)  
+- ✅ Disain: klaasiefekt, gradient-taustad, animatsioonid  
+- ✅ Responsiivne mobiilivaade (mobile-first)
 
-✅ Automaatselt kasutaja asukoha tuvastus (Geolocation API)
+## 🧪 Katsetused & disain
 
-✅ Disain: klaasiefekt + gradient-taustad + animatsioonid
+Katsetasin ka **dünaamilisi taustapilte** (nt `sunny.jpg`, `cloudy.jpg`, `rainy.jpg`), kuid jätsin need projektist välja, et:
 
-✅ Responsiivne (mobile-first)
+- hoida projekt kergena ja kiirelt laaditavana  
+- vältida pildimahu suurenemist ja lisakompleksust
 
-📌 Magento 2 ja Vue Storefront
-Ülesande alguses proovisin installeerida nii Magento 2 kui ka Alokai (endine Vue Storefront 2) arenduskeskkonda. Mõlemad kloonisin GitHubist (magento2, vue-storefront), kuid:
+## 🧱 Märkus: Magento 2 + Vue Storefront
 
-Vue Storefront 2 käivitusprotsess jäi katki (turborepo, sharp build errorid, sõltuvuste konfliktid)
+Ülesande alguses proovisin installeerida nii Magento 2 kui ka Vue Storefront 2 (Alokai). Mõlemad kloonisin GitHubist (`magento2`, `vue-storefront`), kuid:
 
-Magento 2 install osutus samuti mahukaks ja sõltuv spetsiifilisest keskkonnast (nt Docker, PHP versioon)
+- ❌ Vue Storefront 2 ei käivitunud turborepo/sharp errorite tõttu  
+- ❌ Magento 2 nõudis Dockerit ja PHP-spetsiifikat
 
-➡️ Seetõttu otsustasin jätkata ilmaäpi loomisega Nuxt 3 baasil – see võimaldas demonstreerida:
+➡️ Seetõttu keskendusin Nuxt 3 põhisele ilmaäpile, et näidata:
 
-Vue/Nuxt ökosüsteemi kasutust
+- Vue/Nuxt oskusi  
+- Välist API ühendust  
+- Visuaalseid dünaamilisi muutusi  
+- AI abiga probleemide lahendamist  
+- GitHub commit-töövoogu
 
-välise API ühendust
+✳️ Soovi korral võin Vue Storefrontiga jätkata eraldi branchis.
 
-visuaali muutmist andmete põhjal
+## 🧠 Refleksioon ja ajakulu
 
-AI abiga probleemide lahendamist
+- Töö kokku kestis u **5 tundi**, millest ~2h kulus katsetustele ja harjumisele  
+- Projekt oleks olnud tehtav ka ~3h-ga, kuid võtsin teadlikult rohkem aega, et:
+  - õppida uusi tööriistu (Nuxt 3 + Tailwind)  
+  - katsetada disainivõtteid  
+  - hoida töö korrastatuna ja dokumenteerituna
 
-ja GitHub töövoogu
+## 🔮 Tulevased täiustused
 
-✳️ Soovi korral võin Vue Storefrontiga jätkata eraldi branchis või hilisemas commitis.
+- Magento + Vue Storefront integreerimine (eraldi branchis)  
+- API error handling ja fallback-id  
+- UI polish (hoverid, ikoonid, animatsioonid)  
+- PWA tugi („Add to Home Screen”)  
+- Tume/hele režiimi automaatne tugi
 
-🎨 Visuaalsed katsetused
-Katsetasin ka dünaamilisi taustapilte (nt sunny.jpg, cloudy.jpg, rainy.jpg), kuid jätsin need välja, et:
+---
 
-hoida projekti kergena ja kiirelt laaditavana
+## 🔗 Lingid
 
-vältida pildimahu suurenemist ja lisakompleksust
-
-🧠 Refleksioon & ajakulu
-Kogu töö tegemine koos katsetamisega (Magento, Vue Storefront, disainid, visuaalid, taustapildid) võttis u 5 tundi.
-Töö oleks olnud tehtav ka ~3h-ga, kuid võtsin teadlikult aega, et:
-
-õppida uusi tööriistu (nt Nuxt 3 + Tailwind koos)
-
-katsetada disainivõtteid
-
-hoida töö jagatuna, korrastatuna ja dokumenteerituna GitHubis
-
-🔮 Võimalikud järgmised sammud
-Vue Storefront + Magento integreerimine (eraldi branchis)
-
-Weather API error handling ja fallback-id
-
-UI polish (hoverid, ikoonid, animatsioonid)
-
-PWA tugi (Add to Home Screen)
-
-Tume/hele režiimi automaatne tugi
-
-👉 Live demo: weather-app-flame-one.vercel.app
-👉 GitHub repo: github.com/anusirkas/weather-app
+- 👉 **Live demo**: [weather-app-flame-one.vercel.app](https://weather-app-flame-one.vercel.app)  
+- 👉 **GitHub repo**: [github.com/anusirkas/weather-app](https://github.com/anusirkas/weather-app)
