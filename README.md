@@ -19,9 +19,8 @@ See projekt on loodud **Nuxt 3 + Vue 3** abil. Rakendus kuvab jooksvaid ilmaandm
 
 ## 🛠️ Setup
 
-```bash
-npm install
-npm run dev
+- `npm install`  
+- `npm run dev`
 
 🧪 Tehtud funktsionaalsus
 ✅ Dropdown linnade valikuga (Tallinn, Tartu, London jne)
