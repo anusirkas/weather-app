@@ -1,75 +1,24 @@
-# Nuxt Minimal Starter
+# Weather App 🌦 – Proovitöö Lumav Commerce praktikakohale
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+See projekt on loodud Nuxt 3 + Vue 3 abil. Rakendus kuvab jooksva ilmaandme Tallinna kohta kasutades OpenWeatherMap API-t. Ilma tüübi järgi muutub ka visuaalne kujundus (nt taustavärv pilvise, vihmase või päikselise ilma korral).
 
-## Setup
+## 🎯 Eesmärk
 
-Make sure to install dependencies:
+- Harjutada Nuxt 3 keskkonnas arendamist
+- Luua front-end lahendus, mis tarbib välis-API't
+- Demonstreerida oskust kasutada AI abi (nt ChatGPT)
+- Hoida head Git töövoogu (sagedased commit'id ja selged kirjeldused)
+
+## 🚀 Kasutatavad tehnoloogiad
+
+- [Nuxt 3](https://nuxt.com/)
+- Vue 3 Composition API
+- TailwindCSS (stiilide loomiseks)
+- OpenWeatherMap API
+- Git + GitHub
+
+## 🛠️ Setup
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
