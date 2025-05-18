@@ -1,6 +1,6 @@
 <template>
-  <div class="p-6">
-    <h1 class="text-2xl font-bold mb-4">Minu ilmaleht</h1>
+  <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800 text-center p-4">
+    <h1 class="text-3xl font-bold mb-8">Minu ilm</h1>
     <WeatherWidget />
   </div>
 </template>
