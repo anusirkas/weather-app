@@ -24,7 +24,6 @@
   </div>
 </template>
 
-
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -63,13 +62,51 @@ const fetchWeather = async () => {
   }
 }
 
+const fetchWeatherByCoords = async (lat, lon) => {
+  const apiKey = '801ddf6657be15f4aff7f1c0f7dc2100'
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=et`
+
+  const res = await fetch(url)
+  const data = await res.json()
+  weather.value = data
+  selectedCity.value = data.name
+
+  const main = data.weather[0].main.toLowerCase()
+
+  if (main.includes('rain')) {
+    weatherClass.value = 'from-blue-500 to-indigo-700'
+    weatherIcon.value = '🌧️'
+  } else if (main.includes('clear')) {
+    weatherClass.value = 'from-yellow-300 to-yellow-600'
+    weatherIcon.value = '☀️'
+  } else if (main.includes('cloud')) {
+    weatherClass.value = 'from-gray-300 to-gray-600'
+    weatherIcon.value = '☁️'
+  } else if (main.includes('snow')) {
+    weatherClass.value = 'from-blue-100 to-white'
+    weatherIcon.value = '❄️'
+  } else {
+    weatherClass.value = 'from-green-400 to-green-700'
+    weatherIcon.value = '🌡️'
+  }
+}
+
 onMounted(() => {
-  fetchWeather()
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      const lat = position.coords.latitude
+      const lon = position.coords.longitude
+      await fetchWeatherByCoords(lat, lon)
+    }, () => {
+      fetchWeather()
+    })
+  } else {
+    fetchWeather()
+  }
 })
 </script>
 
-<style>
-/* Smooth fade-in animation */
+<style scoped>
 div {
   animation: fadeIn 1.2s ease-in-out;
 }
@@ -85,5 +122,3 @@ div {
   }
 }
 </style>
-
-

@@ -37,3 +37,6 @@ Seetõttu otsustasin jätkata ilma-äpi loomisega Nuxt 3 baasil – see võimald
 - ja GitHub töövoogu
 
 Kui soovite, võin Vue Storefrontiga jätkata eraldi ning lisada see hiljem täiendava branchi või commitina.
+
+
+🔍 Katsetasin ka dünaamilisi taustapilte (nt sunny.jpg, cloudy.jpg, rainy.jpg, default.jpg jms), aga kuna see oleks suurendanud projekti mahtu ja keerukust (nt pildi optimeerimine, laadimiskiirus, responsiivsus), otsustasin jätta selle välja. Soovi korral saan hiljem lisada eraldi branchis.
