@@ -1,6 +1,6 @@
 # Weather App 🌦 – Proovitöö Lumav Commerce praktikakohale
 
-See projekt on loodud Nuxt 3 + Vue 3 abil. Rakendus kuvab jooksva ilmaandme Tallinna kohta kasutades OpenWeatherMap API-t. Ilma tüübi järgi muutub ka visuaalne kujundus (nt taustavärv pilvise, vihmase või päikselise ilma korral).
+See projekt on loodud Nuxt 3 + Vue 3 abil. Rakendus kuvab jooksvaid ilmaandmeid Tallinna kohta kasutades OpenWeatherMap API-t. Ilma tüübi järgi muutub ka visuaalne kujundus (nt taustavärv pilvise, vihmase või päikselise ilma korral).
 
 ## 🎯 Eesmärk
 
@@ -22,3 +22,21 @@ See projekt on loodud Nuxt 3 + Vue 3 abil. Rakendus kuvab jooksva ilmaandme Tall
 ```bash
 npm install
 npm run dev
+
+---
+
+## 📌 Märkus Magento 2 ja Vue Storefronti kohta
+
+Ülesande alguses proovisin installeerida nii Magento 2 kui ka Alokai (endine Vue Storefront 2) arenduskeskkonda. Mõlemad kloonisin GitHubist (`magento2`, `vue-storefront`), kuid:
+
+- Vue Storefront 2 käivitusprotsess jäi katki (turborepo, sharp build errorid, sõltuvuste konfliktid)
+- Magento 2 install osutus samuti mahukaks ja sõltuv spetsiifilisest keskkonnast (nt Docker, PHP versioon)
+
+Seetõttu otsustasin jätkata ilma-äpi loomisega Nuxt 3 baasil – see võimaldas demonstreerida:
+- Vue/Nuxt ökosüsteemi kasutust
+- välist API ühendust
+- visuaali muutmist andmete põhjal
+- AI abiga probleemide lahendamist
+- ja GitHub töövoogu
+
+Kui soovite, võin Vue Storefrontiga jätkata eraldi ning lisada see hiljem täiendava branchi või commitina.
