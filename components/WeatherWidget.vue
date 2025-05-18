@@ -1,11 +1,16 @@
 <template>
   <div
     :class="[
-        'flex flex-col items-center justify-center text-white rounded-2xl shadow-xl max-w-sm mx-auto p-8 transition-all duration-700',
-        'bg-gradient-to-br bg-white/10 backdrop-blur-md ring-1 ring-white/20',
-        weatherClass
+      'flex flex-col items-center justify-center text-white rounded-2xl shadow-2xl max-w-sm mx-auto p-8 transition-all duration-700',
+      'bg-gradient-to-br bg-white/10 backdrop-blur-md ring-1 ring-white/20',
+      weatherClass
     ]"
   >
+    <label for="city" class="mb-4 text-lg font-semibold text-white">Vali linn:</label>
+    <select id="city" v-model="selectedCity" @change="fetchWeather" class="mb-6 text-black px-4 py-2 rounded-md">
+      <option v-for="city in cities" :key="city" :value="city">{{ city }}</option>
+    </select>
+
     <div class="text-6xl mb-2">{{ weatherIcon }}</div>
     <h2 class="text-2xl font-bold tracking-wide mb-1">
       {{ weather?.name || '...' }}
@@ -19,17 +24,20 @@
   </div>
 </template>
 
+
 <script setup>
 import { ref, onMounted } from 'vue'
 
 const weather = ref(null)
-const weatherClass = ref('bg-gradient-to-br from-gray-400 to-gray-600')
+const weatherClass = ref('from-gray-400 to-gray-600')
 const weatherIcon = ref('⛅')
+
+const cities = ['Tallinn', 'Tartu', 'London', 'Tokyo', 'New York', 'Cairo', 'Reykjavík', 'Sydney']
+const selectedCity = ref('Tallinn')
 
 const fetchWeather = async () => {
   const apiKey = '801ddf6657be15f4aff7f1c0f7dc2100'
-  const city = 'Tallinn'
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=et`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity.value}&appid=${apiKey}&units=metric&lang=et`
 
   const res = await fetch(url)
   const data = await res.json()
