@@ -102,6 +102,7 @@ const descriptionsET = {
   'few clouds': 'Üksikud pilved',
   'scattered clouds': 'Hajusad pilved',
   'broken clouds': 'Katkendlikud pilved',
+  'overcast clouds': 'Täielikult pilves',
   'shower rain': 'Hoovihm',
   'rain': 'Vihm',
   'light rain': 'Nõrk vihm',
