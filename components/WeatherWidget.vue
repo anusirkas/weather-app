@@ -18,9 +18,10 @@
       {{ weather?.name || '...' }}
     </h2>
 
-    <p class="text-base sm:text-lg capitalize mb-4">
-      {{ weather?.weather?.[0].description || 'Laen...' }}
+    <p class="text-base sm:text-lg mb-4">
+      {{ descriptionsET[weather?.weather?.[0].description] || weather?.weather?.[0].description || 'Laen...' }}
     </p>
+
 
     <p class="text-3xl sm:text-4xl font-semibold">
       {{ Math.round(weather?.main?.temp) }}°C
@@ -95,6 +96,21 @@ const fetchWeatherByCoords = async (lat, lon) => {
     weatherIcon.value = '🌡️'
   }
 }
+
+const descriptionsET = {
+  'clear sky': 'Selge taevas',
+  'few clouds': 'Üksikud pilved',
+  'scattered clouds': 'Hajusad pilved',
+  'broken clouds': 'Katkendlikud pilved',
+  'shower rain': 'Hoovihm',
+  'rain': 'Vihm',
+  'light rain': 'Nõrk vihm',
+  'moderate rain': 'Mõõdukas vihm',
+  'thunderstorm': 'Äike',
+  'snow': 'Lumi',
+  'mist': 'Udu'
+}
+
 
 onMounted(() => {
   if (navigator.geolocation) {
